@@ -9,7 +9,7 @@ const OurBlogs = () => {
     <div className="max-w-[1224px] mx-auto px-[16px] xl:px-0">
       <div className="flex items-center justify-between mb-[20px]">
         <h2 className="text-[24px] font-semibold">Our blogs</h2>
-        <Link to="/products" className="flex items-center gap-[8px]">
+        <Link to="/blog" className="flex items-center gap-[8px]">
           View all <FaAngleRight className="text-[14px]" />
         </Link>
       </div>
@@ -28,7 +28,7 @@ const OurBlogs = () => {
             </p>
           </div>
         </div>
-        <div className="shadow-lg shadow-[#7171711F] border col-span-1 md:col-span-2 row-span-1 flex border-gray-400 rounded-[8px] overflow-hidden">
+        <div className="shadow-lg shadow-[#7171711F] border col-span-1 md:col-span-2 row-span-1 flex flex-col md:flex-row border-gray-400 rounded-[8px] overflow-hidden">
           <img src={blog2} alt="blog2" />
           <div className="p-[10px]">
             <h2 className="mb-[3px] font-semibold">Meta Platforms plans to release free software that...</h2>
@@ -41,7 +41,7 @@ const OurBlogs = () => {
             </div>
           </div>
         </div>
-        <div className="shadow-lg col-span-2 shadow-[#7171711F] border flex border-gray-400 rounded-[8px] overflow-hidden">
+        <div className="shadow-lg col-span-2 shadow-[#7171711F] border hidden md:flex border-gray-400 rounded-[8px] overflow-hidden">
           <img src={blog2} alt="blog2" />
           <div className="p-[10px]">
             <h2 className="mb-[3px] font-semibold">Meta Platforms plans to release free software that...</h2>

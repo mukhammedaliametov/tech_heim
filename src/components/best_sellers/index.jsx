@@ -6,18 +6,18 @@ import Card from "../card";
 import banner1 from '../../assets/products_banner1.png';
 import banner2 from '../../assets/products_banner2.png';
 
-const NewProducts = () => {
+const BestSellers = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios
-      .get("https://dummyjson.com/products?sortBy=rating&order=desc&limit=8")
+      .get("https://dummyjson.com/products?sortBy=discountPercentage&order=desc&limit=8")
       .then((res) => setProducts(res.data.products))
       .catch((err) => console.log(err, "Xatolik"));
   }, []);
   return (
     <div className="max-w-[1224px] mx-auto px-[16px] xl:px-0 mt-[30px]">
       <div className="flex items-center justify-between">
-        <h2 className="text-[24px] font-semibold">New Products</h2>
+        <h2 className="text-[24px] font-semibold">Best sellers</h2>
         <Link to="/products" className="flex items-center gap-[8px]">
           View all <FaAngleRight className="text-[14px]" />
         </Link>
@@ -36,12 +36,8 @@ const NewProducts = () => {
           );
         })}
       </div>
-      <div className="flex flex-col md:flex-row items-center gap-[20px] mb-[30px]">
-        <img src={banner1} className="cursor-pointer" alt="banner1" />
-        <img src={banner2} className="cursor-pointer hidden lg:block" alt="banner2" />
-      </div>
     </div>
   );
 };
 
-export default NewProducts;
+export default BestSellers;

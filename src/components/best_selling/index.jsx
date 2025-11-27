@@ -18,8 +18,8 @@ const SaleProducts = () => {
   }, []);
 
   return (
-    <div className="max-w-[1224px] mx-auto xl:px-0 bg-[#003f89] py-[10px] px-[20px] rounded-xl mt-6">
-      <div className="flex gap-3 overflow-x-auto xl:overflow-x-visible mx-[110px]">
+    <div className="hidden md:block max-w-[1224px] mx-auto bg-[#003f89] py-[10px] px-[20px] rounded-xl mt-6">
+      <div className="flex gap-3 overflow-x-auto xl:overflow-x-visible mx-[40px] md:mx-[80px] lg:mx-[110px]">
         {products.slice(15, 20).map((item) => (
           <Link to={`/product/${item.id}`} key={item.id} className="bg-white rounded-xl w-full shadow-sm px-[8px] py-[8px]">
             <span className="bg-orange-200 text-orange-600 text-[12px] font-bold px-2 py-1 rounded-md">

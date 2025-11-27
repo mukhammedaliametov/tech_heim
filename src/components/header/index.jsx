@@ -56,7 +56,7 @@ const Header = () => {
         </div>
         <nav className={`absolute px-[16px] h-screen xl:px-0 top-[50px] flex flex-col gap-[10px] bg-white w-full py-[30px] -z-10 transition-all duration-500 ${nav ? 'left-0' : 'left-[-100%]'}`}>
           {navItems.map((item, index) => (
-            <NavLink className={({isActive}) => (`border-b-2 border-amber-50 mb-[20px] pb-[20px] ${isActive ? 'text-primary-blue' : 'text-primary-black'}`)} key={index} to={item.link}>
+            <NavLink onClick={handleClick} className={({isActive}) => (`border-b-2 border-amber-50 mb-[20px] pb-[20px] ${isActive ? 'text-primary-blue' : 'text-primary-black'}`)} key={index} to={item.link}>
               {item.name}
             </NavLink>
           ))}
